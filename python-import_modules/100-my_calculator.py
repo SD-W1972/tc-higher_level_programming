@@ -8,6 +8,8 @@ if len(sys.argv) != 4:
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     sys.exit(1)
 
+import sys
+
 a = int(sys.argv[1])
 b = int(sys.argv[3])
 

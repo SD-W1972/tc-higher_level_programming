@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def multiple_returns(frase):
-    l = len(frase)
-    c = frase[0] if l > 0 else None
-    t = (l, c)
+    leng = len(frase)
+    car = frase[0] if l > 0 else None
+    tuple = (leng, car)
     return t

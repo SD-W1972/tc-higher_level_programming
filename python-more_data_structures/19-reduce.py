@@ -10,5 +10,5 @@ def calc_average(a_dictionary):
 
     average_age = total_age / len(ages)
     average_salary = total_salary / len(salaries)
-
+    
     return average_salary, average_age

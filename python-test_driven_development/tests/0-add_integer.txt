@@ -2,6 +2,11 @@
 
 Testing add_integer function
 ============================
+
+First, import the function:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Basic tests:
 >>> add_integer(1, 2)
 3
 

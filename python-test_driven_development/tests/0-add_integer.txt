@@ -1,17 +1,3 @@
->>> float('inf')  # Infinito positivo
-inf
->>> float('-inf')  # Infinito negativo
--inf
->>> float('nan')  # Not a Number
-nan
-```
-
-O checker quer que você teste o que acontece quando passa esses valores pra função.
-
----
-
-## **Adicione ao seu arquivo de testes:**
-```
 # tests/0-add_integer.txt
 
 Testing add_integer function

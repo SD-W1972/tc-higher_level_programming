@@ -29,13 +29,11 @@ def matrix_divided(matrix, div):
     for row in matrix:
         if not all(isinstance(elem, (int, float)) for elem in row):
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    control = 0
-    for i in range(0, len(matrix)):
-        size = len(matrix[i])
-        if len(matrix[i]) != size:
-            control = 1
 
-    if control == 1: raise(TypeError("Each row of the matrix must have the same size"))
+    row_size = len(matrix[0])
+    if not all(len(row) == row_size for row in matrix):
+        raise TypeError("Each row of the matrix must have the same size")
+
     if not isinstance(div, (int, float)): raise(TypeError("div must be a number"))
     if div == 0: raise(ZeroDivisionError("division by zero"))
 

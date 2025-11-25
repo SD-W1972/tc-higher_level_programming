@@ -6,6 +6,7 @@ print a square with the desired number
 of #
 """
 
+
 def print_square(size):
     """ 
     Prints a square with x number of # in its formation

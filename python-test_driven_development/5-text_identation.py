@@ -5,6 +5,7 @@ This module provides a function tha identates the
 provided string on its conducts
 """
 
+
 def text_indentation(text):
     """
     Prints the provided string and identates it by

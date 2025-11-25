@@ -1,0 +1,20 @@
+# tests/5-text_indentation
+
+Tests text_indentation function
+===============================
+
+Import the function
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Correct parameter for text
+>>> text_indentation("Lorem ipsum, dolor? lorem lorem: ipsum dolor")
+Lorem ipsum, dolor?
+
+ lorem lorem:
+
+
+Text not a str object
+>>>text_indentation(123)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer

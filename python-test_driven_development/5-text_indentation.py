@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Text indentation module
-This module provides a function that indents the 
+This module provides a function that indents the
 provided string on specific characters
 """
 

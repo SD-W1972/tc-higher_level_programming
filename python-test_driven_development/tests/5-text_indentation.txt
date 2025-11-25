@@ -10,14 +10,14 @@ Correct parameter for text
 >>> text_indentation("Lorem ipsum, dolor? lorem lorem: ipsum dolor")
 Lorem ipsum, dolor?
 
- lorem lorem:
+lorem lorem:
 
 
 Text not a str object
 >>> text_indentation(123)
 Traceback (most recent call last):
 ...
-TypeError: size must be an integer
+TypeError: text must be a string
 
 Empty string
 >>> text_indentation("")

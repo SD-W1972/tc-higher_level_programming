@@ -1,5 +1,26 @@
 #!/usr/bin/python3
+"""
+Divide a matrix module
+This module provides a function to divide a matrix with multiple validation conducts
+"""
+
 def matrix_divided(matrix, div):
+    """
+    Divides each member of a matrix by the provided variable div
+
+    Args:
+        matrix: integer or float
+        div: integer or float
+    
+    Returns:
+        int/float: new matrix with all numbers from original matrix divided by div
+    
+    Raises:
+        TypeError: if matrix is not a list of lists
+        TypeError: if matrix is not made of integers/float
+        TypeError: if div is not a number
+        ZeroDivisionError: if div is zero
+    """
     if (not isinstance(matrix, list) or 
         not all(isinstance(row, list) for row in matrix) or
         len(matrix) == 0):

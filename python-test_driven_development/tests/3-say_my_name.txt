@@ -15,7 +15,7 @@ My name is Walter White
 
 Case with only first name
 >>> say_my_name("Bob")
-My name is Bob 
+My name is Bob
 
 Error cases - first_name not a string
 >>> say_my_name(12, "White")
@@ -57,7 +57,7 @@ TypeError: first_name must be a string
 
 Edge case - empty strings
 >>> say_my_name("", "")
-My name is  
+My name is 
 
 >>> say_my_name("", "Doe")
 My name is  Doe

@@ -14,7 +14,17 @@ Lorem ipsum, dolor?
 
 
 Text not a str object
->>>text_indentation(123)
+>>> text_indentation(123)
 Traceback (most recent call last):
 ...
 TypeError: size must be an integer
+
+Empty string
+>>> text_indentation("")
+
+
+Missing one argument
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'

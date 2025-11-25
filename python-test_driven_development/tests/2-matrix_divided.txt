@@ -51,3 +51,6 @@ Traceback (most recent call last):
 ...
 TypeError: matrix_divided() missing 1 required positional argument: 'div'
 
+Ifinite div
+>>> matrix_divided([[1, 2, 3], [3, 2, 1]], float('inf'))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]

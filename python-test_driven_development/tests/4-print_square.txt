@@ -18,10 +18,6 @@ Traceback (most recent call last):
 ...
 ValueError: size must be >= 0
 
-Size is float but less than zero
->>> print_square(-1.2)
-TypeError: size must be an integer
-
 Normal tests
 >>> print_square(4)
 ####

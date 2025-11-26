@@ -111,3 +111,15 @@ Edge cases
 
 >>> matrix_mul([[1.5, 2.5], [3.5, 4.5]], [[2, 0], [0, 2]])
 [[3.0, 5.0], [7.0, 9.0]]
+
+Missing one argument
+>>> matrix_mul([[1, 2, 3]])
+TypeError (most recent call last):
+...
+matrix_mul() missing 1 required positional argument: 'm_b'
+
+Missing both arguments
+>>> matrix_mul()
+TypeError (most recent call last):
+...
+matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'

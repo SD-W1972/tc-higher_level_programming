@@ -24,45 +24,54 @@ def matrix_mul(m_a, m_b):
         TypeError: if the number of rows isn't even on m_a or m_b
         ValueError: if m_a and m_b can't be multiplied
     """
-    if(not isinstance(m_a, list) or
-        not isinstance(m_b, list)):
-        raise(TypeError
-        ("m_a must be a list or m_b must be a list"))
+    # Validate m_a and m_b are lists
+    if not isinstance(m_a, list) or not isinstance(m_b, list):
+        raise TypeError("m_a must be a list or m_b must be a list")
+    
+    # Validate m_a and m_b are lists of lists
     if not all(isinstance(row, list) for row in m_a) or not all(isinstance(row, list) for row in m_b):
-        raise TypeError
-        ("m_a must be a list of lists or m_b must be a list of lists")
-
+        raise TypeError("m_a must be a list of lists or m_b must be a list of lists")
+    
+    # Validate matrices are not empty
     if len(m_a) == 0 or len(m_b) == 0:
-        raise(ValueError
-        ("m_a can't be empty or m_b can't be empty"))
+        raise ValueError("m_a can't be empty or m_b can't be empty")
+    
+    # Validate all elements in m_a are integers or floats
     for row in m_a:
+        if len(row) == 0:
+            raise ValueError("m_a can't be empty or m_b can't be empty")
         for element in row:
             if not isinstance(element, (float, int)):
-                raise(TypeError
-                ("m_a should contain only integers or floats or m_b should contain nly integers or floats"))
+                raise TypeError("m_a should contain only integers or floats or m_b should contain only integers or floats")
+    
+    # Validate all elements in m_b are integers or floats
     for row in m_b:
+        if len(row) == 0:
+            raise ValueError("m_a can't be empty or m_b can't be empty")
         for element in row:
             if not isinstance(element, (float, int)):
-                raise
-            (TypeError("m_a should contain only integers or floats or m_b should contain nly integers or floats"))
-
-    row_size = len(m_a[0])
-    if not all(len(row) == row_size for row in m_a):
-        raise
-    (TypeError("each row of m_a must be of the same size or each row of m_b ust be of the same size"))
-    row_sizeb = len(m_b[0])
-    if not all(len(row) == row_size for row in m_b):
-        raise
-    (TypeError("each row of m_a must be of the same size or each row of m_b ust be of the same size"))
-
-    if row_size != row_sizeb:
-        raise(ValueError
-        ("m_a and m_b can't be multiplied"))
-
-    result = [[0 for _ in range(len(m_b[0]))] for _ in range(len(m_a))]
+                raise TypeError("m_a should contain only integers or floats or m_b should contain only integers or floats")
+    
+    # Validate m_a is rectangular
+    a_cols = len(m_a[0])
+    if not all(len(row) == a_cols for row in m_a):
+        raise TypeError("each row of m_a must be of the same size or each row of m_b must be of the same size")
+    
+    # Validate m_b is rectangular
+    b_cols = len(m_b[0])
+    if not all(len(row) == b_cols for row in m_b):
+        raise TypeError("each row of m_a must be of the same size or each row of m_b must be of the same size")
+    
+    # Validate matrices can be multiplied
+    if a_cols != len(m_b):
+        raise ValueError("m_a and m_b can't be multiplied")
+    
+    # Perform matrix multiplication
+    result = [[0 for _ in range(b_cols)] for _ in range(len(m_a))]
 
     for i in range(len(m_a)):
-        for j in range(len(m_b[0])):
+        for j in range(b_cols):
             for k in range(len(m_b)):
                 result[i][j] += m_a[i][k] * m_b[k][j]
+    
     return result

@@ -5,6 +5,7 @@ This module provides a function to
 multiply to matrices
 """
 
+
 def matrix_mul(m_a, m_b):
     """
     This function multiplies m_a and m_b with

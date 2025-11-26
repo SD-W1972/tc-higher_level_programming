@@ -14,7 +14,7 @@ def matrix_mul(m_a, m_b):
     Args:
         m_a: matrix a (float or integer)
         m_b: matrix b (float or integer)
-    
+
     Raises:
         TypeError: if m_a or m_b aren't lists
         TypeError: if m_a or m_b aren't matrices

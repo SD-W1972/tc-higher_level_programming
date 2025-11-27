@@ -21,10 +21,17 @@ def lazy_matrix_mul(m_a, m_b):
     Raises:
         ValueError: if matrices cannot be multiplied
     """
+    if not isinstance(m_a, list) or not isinstance(m_b, list):
+        raise ValueError("Scalar operands are not allowed, use '*' instead")
+
     try:
         a = np.array(m_a)
         b = np.array(m_b)
         result = np.matmul(a, b)
         return result
     except ValueError as e:
-        raise ValueError(str(e)) from e
+        if "aligned" in str(e):
+            raise ValueError(str(e)) from e
+        raise
+    except Exception as e:
+        raise

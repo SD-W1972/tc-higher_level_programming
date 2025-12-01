@@ -59,6 +59,5 @@ class Rectangle:
         return "\n".join(result)
 
     def __repr__(self):
-        """Return a string representation with valid code to
-        instantiate a new rectangle object"""
-        return f"Rectangle(width={self.width}), height={self.height}"
+        """Return official string representation of rectangle"""
+        return f"Rectangle({self.width}, {self.height})"

@@ -59,11 +59,11 @@ def main():
         print("N must be at least 4")
         sys.exit(1)
 
-
     board = [-1] * n
     solutions = []
     solve_nqueens(n, board, 0, solutions)
     print_solutions(solutions)
+
 
 if __name__ == "__main__":
     main()

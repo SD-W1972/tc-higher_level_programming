@@ -19,6 +19,7 @@ def is_safe(board, row, col, n):
             return False
     return True
 
+
 def solve_nqueens(n, board, row, solutions):
     """
     Backtracking function to find all solutions
@@ -34,12 +35,14 @@ def solve_nqueens(n, board, row, solutions):
             solve_nqueens(n, board, row + 1, solutions)
             board[row] = -1
 
+
 def print_solutions(solutions):
     """
     Print all solutions in the required format
     """
     for solution in solutions:
         print(solution)
+
 
 def main():
     if len(sys.argv) != 2:
@@ -55,6 +58,7 @@ def main():
     if n < 4:
         print("N must be at least 4")
         sys.exit(1)
+
 
     board = [-1] * n
     solutions = []

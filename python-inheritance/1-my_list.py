@@ -7,6 +7,13 @@ sorts a list from ascending order
 
 
 class MyList(list):
+    """
+    A class that defines a method to sort the inherited
+    list
+
+    Inherits:
+        list
+    """
     def print_sorted(self):
         """Prints list sorted without modifying original"""
         temp_list = self[:]

@@ -7,32 +7,14 @@ sorts a list from ascending order
 
 
 class MyList(list):
-    """
-    A class that defines a method to sort the inherited
-    list
-
-    Inherits:
-        list
-    """
     def print_sorted(self):
-        """
-        print_sorted method. This method utilizes a
-        bubble sort algorithm
+        """Prints list sorted without modifying original"""
+        temp_list = self[:]
 
-        Args:
-            self
+        n = len(temp_list)
+        for i in range(n - 1):
+            for j in range(0, n - i - 1):
+                if temp_list[j] > temp_list[j + 1]:
+                    temp_list[j], temp_list[j + 1] = temp_list[j + 1], temp_list[j]
 
-        Returns:
-            the list obj sorted in ascending order
-        """
-        for i in range(len(list) - 1):
-            swapped = False
-            for j in range(0, len(list) - i - 1):
-                if list[j] > list[j + 1]:
-                    list[j], 
-                    list[j + 1] = list[j + 1], list[j]
-                    swapped = True
-            if not swapped:
-                break
-
-        return list
+        print(temp_list)

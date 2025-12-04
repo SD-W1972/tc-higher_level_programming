@@ -12,7 +12,7 @@ def lookup(obj):
 
     Args:
         obj: any object
-    
+
     Returns: list with available attributes and
     methods from obj
     """

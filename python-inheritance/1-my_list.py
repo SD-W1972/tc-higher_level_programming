@@ -14,6 +14,7 @@ class MyList(list):
     Inherits:
         list
     """
+
     def print_sorted(self):
         """Prints list sorted without modifying original"""
         temp_list = self[:]
@@ -22,7 +23,7 @@ class MyList(list):
         for i in range(n - 1):
             for j in range(0, n - i - 1):
                 if temp_list[j] > temp_list[j + 1]:
-                    temp_list[j],
-                    temp_list[j + 1] = temp_list[j + 1], temp_list[j]
+                    temp_list[j], temp_list[j + 1] = \
+                        temp_list[j + 1], temp_list[j]
 
         print(temp_list)

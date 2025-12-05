@@ -1,0 +1,40 @@
+# tests/7-base_geometry
+
+Testing BaseGeometry class
+==========================
+
+Import the class
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Check exceptions
+>>> base_geometry = BaseGeometry()
+>>> base_geometry.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+>>> base_geometry.integer_validation("name", 5.6)
+Traceback (most recent call last):
+...
+TypeError: <name> must be an integer
+
+>>> base_geometry.integer_validation("name", 0)
+Traceback (most recent call last):
+...
+ValueError: <name> must be greater than 0
+
+>>> base_geometry.integer_validation("name", -5)
+Traceback (most recent call last):
+...
+ValueError: <name> must be greater than 0
+
+Missing arguments
+>>> base_geometry.integer_validation()
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validation() missing 2 required positional arguments: 'name' and 'value'
+
+>>> base_geometry.integer_validation("name")
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validation() missing 1 required positional argument: 'value'

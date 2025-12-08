@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Square class inheriting from Rectangle"""
-BaseGeometry = __import__('9-rectangle').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Rectangle(Rectangle):

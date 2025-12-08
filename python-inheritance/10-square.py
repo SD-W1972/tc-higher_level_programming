@@ -3,7 +3,7 @@
 Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Rectangle(Rectangle):
+class Square(Rectangle):
     """Defines a square with size"""
 
     def __init__(self, size):

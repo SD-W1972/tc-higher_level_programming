@@ -5,7 +5,7 @@ Rectangle = __import__('9-rectangle').Rectangle
 
 class Square(Rectangle):
     """Defines a Square with size"""
-    
+
     def __init__(self, size):
         """Instantiates the square object with size"""
         self.integer_validator("size", size)
@@ -17,4 +17,4 @@ class Square(Rectangle):
 
     def __str__(self):
         """Return string representation of square"""
-        return "[Square {}/{}]".format(sell.__size, self.__size)
+        return "[Square {}/{}]".format(self.__size, self.__size)

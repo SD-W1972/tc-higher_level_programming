@@ -21,8 +21,8 @@ class Circle(Shape):
     """Circle shape implementation"""
 
     def __init__(self, radius):
-        """Initialize circle with radius"""
-        self.__radius = radius
+        """Initialize circle with radius (uses absolute value)"""
+        self.__radius = abs(radius)  # Usa valor absoluto
 
     def area(self):
         """Calculate circle area"""

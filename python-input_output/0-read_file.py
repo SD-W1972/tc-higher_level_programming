@@ -1,25 +1,13 @@
 #!/usr/bin/python3
-""" Read file module """
+"""Read file module"""
 
 
 def read_file(filename=""):
     """
-    Read file function
+    Read file and print its content
 
-    Prints the content of the provided
-    file, otherwise raises an exception
- 
     Args:
-        filename: string
-
-    Returns:
-        Nothing
-    """    
-    try:
-        with open(filename, 'r', encoding='utf-8')as file:
-            content = file.read()
-            print(content)
-    except FileNotFoundError:
-        print("file doesn't exist")
-    except PermissionError:
-        print("file permission")
+        filename (str): Path to the file
+    """
+    with open(filename, 'r', encoding='utf-8') as file:
+        print(file.read(), end="")

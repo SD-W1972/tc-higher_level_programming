@@ -11,7 +11,7 @@ def from_json_string(my_str):
     Args:
         my_str (string)
 
-    Returns: 
+    Returns:
         Json obj
     """
     return json.loads(my_str)

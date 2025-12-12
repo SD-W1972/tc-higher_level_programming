@@ -10,7 +10,7 @@ def write_file(filename="", text=""):
         filename (string)
         text (string)
 
-    Returns nothing
+    Returns the number of characters wrote
     """
     with open(filename, 'w') as file:
         file.write(text)

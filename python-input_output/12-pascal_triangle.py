@@ -11,7 +11,7 @@ def pascal_triangle(n):
     tlist = [[1]]
 
     for i in range(n-1):
-        temp = 0 + tlist[-1] + [0]
+        temp = [0] + tlist[-1] + [0]
         row = []
 
         for j in range(len(temp) - 1):

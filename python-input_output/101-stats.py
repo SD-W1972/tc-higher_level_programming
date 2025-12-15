@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Parse logs from stdin and compute metrics"""
+
 import sys
 
 total_size = 0

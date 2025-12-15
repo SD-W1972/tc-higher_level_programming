@@ -19,7 +19,7 @@ class Student:
         return {attr: getattr(self, attr)
                 for attr in attrs if hasattr(self, attr)}
 
-    def reload_from_json(sef, json):
+    def reload_from_json(self, json):
         """Replace all attributes from JSON dictionary"""
         for key, value in json.items():
             setattr(self, key, value)

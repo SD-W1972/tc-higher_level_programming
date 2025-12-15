@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""Pascals triangle module"""
+
 
 def pascal_triangle(n):
+    """Returns a list with the pascals triangle"""
     tlist = []
     if n <= 0:
         return tlist

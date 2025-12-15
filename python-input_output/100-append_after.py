@@ -2,8 +2,8 @@
 """Search and update module"""
 
 
-def append_after(self, filename="", search_string ="", new_string=""):
-    """append after function"""
+def append_after(filename="", search_string="", new_string=""):
+    """Insert new_string after lines containing search_string"""
     lines = []
 
     with open(filename, 'r', encoding='utf-8') as file:
@@ -12,5 +12,5 @@ def append_after(self, filename="", search_string ="", new_string=""):
             if search_string in line:
                 lines.append(new_string)
 
-    with open(filename, 'w') as f:
+    with open(filename, 'w', encoding='utf-8') as f:
         f.writelines(lines)
